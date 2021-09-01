@@ -1,5 +1,6 @@
 # -------------------------Reverse integer--------------------------
 # Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
+# cases = 1032, Runtime: 16 ms ,Memory Usage: 13.4 MB
 
 # import math
 # x = int(input())
@@ -31,17 +32,17 @@
 
 # ---------------------------------Palindrome-----------------------------------------
 # An integer is a palindrome when it reads the same backward as forward. For example, 121 is palindrome while 123 is not.
+# cases = 11510, Runtime: 80 ms, Memory Usage: 13.3 MB
 
-
-x = int(input())
-ori = x
-rev=0
-if x<0:
-    print(False)
-else:
-    while x!=0:
-        y = int(x%10)
-        rev = (rev*10) + y
-        x = int(x/10)
-    final = True if ori==rev else False
-    print(final)
+# x = int(input())
+# ori = x
+# rev=0
+# if x<0:
+#     print(False)
+# else:
+#     while x!=0:
+#         y = int(x%10)
+#         rev = (rev*10) + y
+#         x = int(x/10)
+#     final = True if ori==rev else False
+#     print(final)
