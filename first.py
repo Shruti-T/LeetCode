@@ -1,4 +1,4 @@
-# -------------------------Reverse integer--------------------------
+# --------------------------------------------------Reverse integer-------------------------------------------
 # Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
 # cases = 1032, Runtime: 16 ms ,Memory Usage: 13.4 MB
 
@@ -30,7 +30,7 @@
 #         else:
 #             print(f)
 
-# ---------------------------------Palindrome-----------------------------------------
+# ------------------------------------------------Palindrome----------------------------------------------------
 # An integer is a palindrome when it reads the same backward as forward. For example, 121 is palindrome while 123 is not.
 # cases = 11510, Runtime: 80 ms, Memory Usage: 13.3 MB
 
@@ -46,3 +46,26 @@
 #         x = int(x/10)
 #     final = True if ori==rev else False
 #     print(final)
+
+# -------------------------------------------------Sum--------------------------------------------------------
+# Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+nums = int(input(""))
+arr = []
+for i in range (0,nums):
+    ele= int(input())
+    arr.append(ele)
+
+print(arr)
+target = int(input('target: '))
+one=0
+second = 0
+for i in range (0, nums-1):
+    for j in range (0,nums-1):
+        if (arr[i]+arr[j] == target):
+            one = i
+            second = j
+            break
+
+ans = [second,one]
+print(ans)
