@@ -50,22 +50,56 @@
 # -------------------------------------------------Sum--------------------------------------------------------
 # Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target. You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
-nums = int(input(""))
-arr = []
-for i in range (0,nums):
-    ele= int(input())
-    arr.append(ele)
+# cases = 55, Runtime: 7519 ms, Memory Usage: 13.9 MB
 
-print(arr)
-target = int(input('target: '))
-one=0
-second = 0
-for i in range (0, nums-1):
-    for j in range (0,nums-1):
-        if (arr[i]+arr[j] == target):
-            one = i
-            second = j
-            break
+# nums = int(input(""))
+# arr = []
+# for i in range (0,nums):
+#     ele= int(input())
+#     arr.append(ele)
 
-ans = [second,one]
-print(ans)
+# print(arr)
+# target = int(input('target: '))
+# one=0
+# second = 0
+# for i in range (0, nums-1):
+#     for j in range (0,nums-1):
+#         if (arr[i]+arr[j] == target):
+#             one = i
+#             second = j
+#             break
+
+# ans = [second,one]
+# print(ans)
+
+# -------------------------------------------Remove Duplicates----------------------------------------------
+# Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. 
+
+# cases = 362,Runtime: 140 ms,Memory Usage: 15.2 MB--------------(METHOD 1)
+
+# nums = [1,2,3,4,4,4,5,6,6,8,8,8,8]
+# high = len(nums)-1
+# for i in range (0,high): 
+#     x = nums[i] 
+#     if ((i+1) <= high):
+#         while(x == nums[i+1]):
+#             nums.pop(i+1)
+#             high = len(nums)-1
+#             if((i+1)>high):
+#                 break
+#     if((i+1)>high):
+#         break 
+# print(len(nums))
+
+# cases = 362, Runtime: 223 ms, Memory Usage: 15 MB ------------(METHOD 2)
+
+# nums = [1,1,2]
+# high = len(nums)-1
+# for i in range (0,high): 
+#     if ((i+1) <= high):
+#         while(nums[i] == nums[i+1]):
+#             nums.pop(i+1)
+#             high -= 1
+#             if((i+1)>high):
+#                 break
+# print(len(nums), nums)
