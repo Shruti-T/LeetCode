@@ -75,31 +75,15 @@
 # -------------------------------------------Remove Duplicates----------------------------------------------
 # Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. 
 
-# cases = 362,Runtime: 140 ms,Memory Usage: 15.2 MB--------------(METHOD 1)
+# cases = 362,Runtime: 60 ms,Memory Usage: 15.2 MB
 
-# nums = [1,2,3,4,4,4,5,6,6,8,8,8,8]
-# high = len(nums)-1
-# for i in range (0,high): 
-#     x = nums[i] 
-#     if ((i+1) <= high):
-#         while(x == nums[i+1]):
-#             nums.pop(i+1)
-#             high = len(nums)-1
-#             if((i+1)>high):
-#                 break
-#     if((i+1)>high):
-#         break 
-# print(len(nums))
+nums = [-1,-1,0,0]
+ori = len(nums)
+if (ori>0 ):
+    nums.append(-101)
+for i in range(0, ori):
+    if (nums[i] != nums[i+1]):
+        nums.append(nums[i])
 
-# cases = 362, Runtime: 223 ms, Memory Usage: 15 MB ------------(METHOD 2)
-
-# nums = [1,1,2]
-# high = len(nums)-1
-# for i in range (0,high): 
-#     if ((i+1) <= high):
-#         while(nums[i] == nums[i+1]):
-#             nums.pop(i+1)
-#             high -= 1
-#             if((i+1)>high):
-#                 break
-# print(len(nums), nums)
+del nums[0:ori+1]
+print(nums)
