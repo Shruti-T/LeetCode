@@ -93,14 +93,24 @@
 
 #  cases: 113 , Runtime: 16 ms, Memory Usage: 13.2 MB
 
-nums = [2,2,2,2,5,3,6,8,3]
-val = 3
-i=0
-while i<len(nums):
-    if(nums[i] == val):
-        nums.pop(i)
-        i=0
-    else:
-        i +=1
+# nums = [2,2,2,2,5,3,6,8,3]
+# val = 2
+# i=0
+# while i<len(nums):
+#     if(nums[i] == val):
+#         nums.pop(i)
+#         i=0
+#     else:
+#         i +=1
 
-print(nums)
+# print(nums)
+
+# ---------------------------------------------Q6) Sqrt(x)-------------------------------------------------------
+# Given a non-negative integer x, compute and return the square root of x.only the integer part of the result is returned. Note: You are not allowed to use any built-in exponent function or operator, such as pow(x, 0.5) or x ** 0.5.
+
+# cases: 1017, Runtime: 20 ms, Memory Usage: 13.3 MB
+
+import math
+x = 4
+y = math.sqrt(x)
+print(int(y))
