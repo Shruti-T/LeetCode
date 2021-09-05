@@ -121,7 +121,22 @@
 
 # cases: 294, Runtime: 12 ms, Memory Usage: 13.6 MB
 
-a = "11"
-b = "1"
-sum = bin(int(a, 2) + int(b, 2))
-print(sum[2:])
+# a = "11"
+# b = "1"
+# sum = bin(int(a, 2) + int(b, 2))
+# print(sum[2:])
+
+
+
+# -----------------------------------------------Q8) Length of Last Word-----------------------------------------
+# Given a string s consisting of some words separated by some number of spaces, return the length of the last word in the string. A word is a maximal substring consisting of non-space characters only.
+
+# cases: 58, Runtime: 24 ms, Memory Usage: 13.8 MB
+import re
+s = "a uhwef fewjoij feff        "
+y = re.split("\s",re.sub(" +", " ", s))
+for i in range(0, len(y)):
+    if(y[i] != ''):
+        d = y[i]
+
+print(d)
