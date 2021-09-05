@@ -132,11 +132,27 @@
 # Given a string s consisting of some words separated by some number of spaces, return the length of the last word in the string. A word is a maximal substring consisting of non-space characters only.
 
 # cases: 58, Runtime: 24 ms, Memory Usage: 13.8 MB
-import re
-s = "a uhwef fewjoij feff        "
-y = re.split("\s",re.sub(" +", " ", s))
-for i in range(0, len(y)):
-    if(y[i] != ''):
-        d = y[i]
 
-print(d)
+# import re
+# s = "a uhwef fewjoij feff        "
+# y = re.split("\s",re.sub(" +", " ", s))
+# for i in range(0, len(y)):
+#     if(y[i] != ''):
+#         d = y[i]
+# print(d)
+
+# ------------------------------------------------Q9) Search Insert Position -----------------------------------
+# Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order. You must write an algorithm with O(log n) runtime complexity.
+
+# cases: 62, Runtime: 28 ms, Memory Usage: 14.1 MB
+
+nums = [1,2,6,8]
+target = 7
+try:
+    x = nums.index(target)
+except:
+    nums.append(target)
+    nums.sort()
+    x = nums.index(target)
+
+print(x)
