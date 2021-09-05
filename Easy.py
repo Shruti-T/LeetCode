@@ -146,13 +146,27 @@
 
 # cases: 62, Runtime: 28 ms, Memory Usage: 14.1 MB
 
-nums = [1,2,6,8]
-target = 7
-try:
-    x = nums.index(target)
-except:
-    nums.append(target)
-    nums.sort()
-    x = nums.index(target)
+# nums = [1,2,6,8]
+# target = 7
+# try:
+#     x = nums.index(target)
+# except:
+#     nums.append(target)
+#     nums.sort()
+#     x = nums.index(target)
 
-print(x)
+# print(x)
+
+# -------------------------------------------------Q10) Plus One-------------------------------------------------
+# You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
+
+# cases: 111, Runtime: 24 ms, Memory Usage: 13.3 MB
+
+# digits = [4,3,2,1]
+# num =""
+# for i in range(0, len(digits)):
+#     num += str(digits[i])
+
+# final = int(num)+1
+# x = [int(a) for a in str(final)]
+# print(x)
