@@ -177,12 +177,27 @@
 
 # cases: 47, Runtime: 120 ms, Memory Usage: 14.6 MB
 
-nums = [1,2,1,2,1,2,2,2,2,3]
-unique = list(dict.fromkeys(nums))
-for i in unique:
+# nums = [1,2,1,2,1,2,2,2,2,3]
+# unique = list(dict.fromkeys(nums))
+# for i in unique:
 
-    if(nums.count(i) > len(nums)/2):
-        x = i
-        break
+#     if(nums.count(i) > len(nums)/2):
+#         x = i
+#         break
 
+# print(x)
+
+# ---------------------------------------------Q12) Single one-------------------------------------------------
+# Given a non-empty array of integers nums, every element appears twice except for one. Find that single one. You must implement a solution with a linear runtime complexity and use only constant extra space.
+
+# cases: 61, Runtime: 108 ms, Memory Usage: 15.8 MB
+
+nums = [9,1,2,3,1,2,3,4,0,4,0]
+nums.sort()
+nums.append(-4 * 10000)
+for i in range(0,len(nums)):
+    if(i%2 == 0 or i==0):
+        if(nums[i] != nums[i+1]):
+            x = nums[i]
+            break
 print(x)
