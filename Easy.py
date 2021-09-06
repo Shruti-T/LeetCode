@@ -170,3 +170,19 @@
 # final = int(num)+1
 # x = [int(a) for a in str(final)]
 # print(x)
+
+
+# ------------------------------------------------Q11) Majority Element------------------------------------------
+# Given an array nums of size n, return the majority element. The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.
+
+# cases: 47, Runtime: 120 ms, Memory Usage: 14.6 MB
+
+nums = [1,2,1,2,1,2,2,2,2,3]
+unique = list(dict.fromkeys(nums))
+for i in unique:
+
+    if(nums.count(i) > len(nums)/2):
+        x = i
+        break
+
+print(x)
