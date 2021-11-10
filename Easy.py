@@ -201,3 +201,19 @@
 #             x = nums[i]
 #             break
 # print(x)
+
+# ----------------------------------------- Q13)Valid Palindrome -------------------------------------------
+# A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers. Given a string s, return true if it is a palindrome, or false otherwise.
+
+# cases: 480, Runtime: 28 ms, Memory Usage: 15.6 MB
+
+import re
+s = "ab_a"
+s = re.sub(r'[^a-zA-Z0-9]','',s).lower()
+back=s[len(s)::-1]
+if(back == s):
+    print('true')
+else:
+    print('false') 
+
+    
