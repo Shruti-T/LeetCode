@@ -207,13 +207,25 @@
 
 # cases: 480, Runtime: 28 ms, Memory Usage: 15.6 MB
 
-import re
-s = "ab_a"
-s = re.sub(r'[^a-zA-Z0-9]','',s).lower()
-back=s[len(s)::-1]
-if(back == s):
-    print('true')
-else:
-    print('false') 
+# import re
+# s = "ab_a"
+# s = re.sub(r'[^a-zA-Z0-9]','',s).lower()
+# back=s[len(s)::-1]
+# if(back == s):
+#     print('true')
+# else:
+#     print('false') 
 
-    
+# ---------------------------------------Q14)Merge Sorted Array --------------------------------------------
+# You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively. The final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
+
+# cases: 59, Runtime: 16 ms, Memory Usage: 13.2 MB
+
+nums1 = [2]
+nums2 = []
+m = 1
+n = 0
+del nums1[len(nums1)-n:len(nums1)]
+nums1.extend(nums2)
+nums1.sort()
+print(nums1)
