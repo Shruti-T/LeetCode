@@ -250,51 +250,51 @@
 
 # cases: 14, Runtime: 24 ms, Memory Usage: 13.4 MB
 
-def fact(num):
-    sol = 1 if (num==1 or num==0) else num * fact(num - 1)
-    return sol
+# def fact(num):
+#     sol = 1 if (num==1 or num==0) else num * fact(num - 1)
+#     return sol
 
-def pascalArr(row):
-    solArr = []
-    for i in range(0,row):
-        newArr =[]
-        for j in range(0,i+1):
-            ele = int(fact(i)/(fact(i-j)*fact(j)))
-            newArr.append(ele)
-        solArr.append(newArr)
-    return solArr
+# def pascalArr(row):
+#     solArr = []
+#     for i in range(0,row):
+#         newArr =[]
+#         for j in range(0,i+1):
+#             ele = int(fact(i)/(fact(i-j)*fact(j)))
+#             newArr.append(ele)
+#         solArr.append(newArr)
+#     return solArr
 
 
-numRows = 30
-val = pascalArr(numRows)
-print(val)
+# numRows = 30
+# val = pascalArr(numRows)
+# print(val)
 
 
 # --------------------------------------- Q16)Longest Common Prefix -----------------------
 
-# strs = ["a","a","b"]
-# wordLen = []
-# match = ""
-# for i in strs:
-#     wordLen.append(len(i))
+strs = ["a","a","b"]
+wordLen = []
+match = ""
+for i in strs:
+    wordLen.append(len(i))
 
-# if(len(strs)<2 or strs[0] == ""):
-#     print(strs[0])
-# elif(len(strs)>1):
-#     for i in range(1,min(wordLen)+1):
-#         if(strs[0][0:i] == strs[1][0:i]):
-#             match = strs[0][0:i] 
-#     if(len(strs) == 2):
-#         print(match)
+if(len(strs)<2 or strs[0] == ""):
+    print(strs[0])
+elif(len(strs)>1):
+    for i in range(1,min(wordLen)+1):
+        if(strs[0][0:i] == strs[1][0:i]):
+            match = strs[0][0:i] 
+    if(len(strs) == 2):
+        print(match)
 
 
-# if(len(strs)>2):
-#     if(match != ""):
-#         for j in range(2,len(strs)):
-#             dup = match
-#             for i in range(1,len(dup)+1):
-#                 if(dup[0:i] == strs[j][0:i]):
-#                     match = strs[j][0:i]
-#         print(match)
-#     else:
-#         print("")
+if(len(strs)>2):
+    if(match != ""):
+        for j in range(2,len(strs)):
+            dup = match
+            for i in range(1,len(dup)+1):
+                if(dup[0:i] == strs[j][0:i]):
+                    match = strs[j][0:i]
+        print(match)
+    else:
+        print("")
