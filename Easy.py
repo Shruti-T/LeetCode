@@ -335,3 +335,23 @@
 # param_3 = obj.top()
 # param_4 = obj.getMin()
 # print(param_3, param_4)
+
+
+# ----------------------------------- Q18) -----------------------
+
+
+
+numbers = [-1,0]
+target = -1
+
+for i in range (0,len(numbers)):
+    for j in range (0, len(numbers)):
+        if(j != i):
+            if(numbers[i] + numbers[j] == target):
+                [n,m] = [j+1,i+1]
+                break
+
+
+print([n,m])
+
+
