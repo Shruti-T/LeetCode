@@ -337,21 +337,23 @@
 # print(param_3, param_4)
 
 
-# ----------------------------------- Q18) -----------------------
+# ----------------------------------- Q18) Two Sum II - Input Array Is Sorted -------------------------------
+# Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Let these two numbers be numbers[index1] and numbers[index2].Return the indices of the two numbers, index1 and index2, added by one as an integer array [index1, index2] of length 2.
 
 
-
-numbers = [-1,0]
+numbers = [-1,0,0,0,0,0,0,0,9,8,2,2,2,2]
 target = -1
 
 for i in range (0,len(numbers)):
     for j in range (0, len(numbers)):
-        if(j != i):
+        if(j != i and j>i):
             if(numbers[i] + numbers[j] == target):
                 [n,m] = [j+1,i+1]
                 break
+            # elif (numbers[i] == numbers[j]):
+            #     numbers
+        
 
 
 print([n,m])
-
-
+print(list(set(numbers)))
