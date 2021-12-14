@@ -340,20 +340,20 @@
 # ----------------------------------- Q18) Two Sum II - Input Array Is Sorted -------------------------------
 # Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Let these two numbers be numbers[index1] and numbers[index2].Return the indices of the two numbers, index1 and index2, added by one as an integer array [index1, index2] of length 2.
 
+# cases: 19, Runtime: 287 ms, Memory Usage: 13.4MB
 
-numbers = [-1,0]
-target = -1
-
-unique = list(set(numbers))
-for i in range (0,len(unique)):
-    for j in range (0, len(unique)):
-        if(j!=i):
-            if(unique[i] + unique[j] == target):
-                x  = [unique[i], unique[j]]
-                y = [numbers.index(x[0]) + 1, numbers.index(x[1]) + 1]
-                break
-            elif(unique[i] + unique[i] == target and numbers.count(unique[i]) == 2):
-                y = [numbers.index(unique[i]) + 1, numbers.index(unique[i]) + 2]
-                break
-y.sort()
-print(y)
+# numbers = [-1,0]
+# target = -1
+# unique = list(set(numbers))
+# for i in range (0,len(unique)):
+#     for j in range (0, len(unique)):
+#         if(j!=i):
+#             if(unique[i] + unique[j] == target):
+#                 x  = [unique[i], unique[j]]
+#                 y = [numbers.index(x[0]) + 1, numbers.index(x[1]) + 1]
+#                 break
+#             elif(unique[i] + unique[i] == target and numbers.count(unique[i]) == 2):
+#                 y = [numbers.index(unique[i]) + 1, numbers.index(unique[i]) + 2]
+#                 break
+# y.sort()
+# print(y)
