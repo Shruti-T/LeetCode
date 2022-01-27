@@ -358,7 +358,93 @@
 # y.sort()
 # print(y)
 
-# ---------------------------------------- Q19) Climbing stairs --------------------------------------------
-# You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+# ---------------------------------------- Q19) Remove Duplicates from Sorted List----------------------------
+# Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
+#  cases: 166, Runtime: 166 ms, Memory Usage: 13.7 MB
 
-# 
+# ----------(leetcode working solution)-------------
+# # Definition for singly-linked list.
+# # class ListNode(object):
+# #     def __init__(self, val=0, next=None):
+# #         self.val = val
+# #         self.next = next
+# class Solution(object):
+#     def deleteDuplicates(self, head):
+#         """
+#         :type head: ListNode
+#         :rtype: ListNode
+#         """
+#         node = head
+#         while node:
+#             current = node
+#             while current.next:
+#                 if current.next.val == node.val:
+#                     current.next = current.next.next
+#                 else:current = current.next
+#             node = node.next
+#         return head
+
+# ---------(my solution, not going with leetcode)-------------------
+# class Node:
+#     def __init__(self,data):
+#         self.data = data
+#         self.next = None
+
+# class LinkedList:
+#     def __init__(self):
+#         self.head = None
+#     def clearDuplicates(self):
+#         arr = []
+#         temp = self.head
+#         while(temp):
+#             if(temp.next == None):
+#                 # print(temp.data)
+#                 arr.append(temp.data)
+#                 temp = temp.next
+#             elif(temp.data == temp.next.data):
+#                     # print(temp.data)
+#                     arr.append(temp.data)
+#                     temp=temp.next.next
+#             else:
+#                 temp = temp.next
+#         return arr
+#     def printLlist(self):
+#         temp = self.head
+#         while(temp):
+#             print(temp.data)
+#             temp=temp.next
+
+# def pointerEle(old):
+#     if(x==1):
+#         llist2.head.next = ele
+#     else:
+#         old.next = ele
+
+# llist = LinkedList()
+# llist.head = Node(1)
+# second = Node(1)
+# third = Node(3)
+# four = Node(3)
+# fifth = Node(6)
+# llist.head.next = second
+# second.next = third
+# third.next = four
+# four.next = fifth
+# # -------------
+# array = llist.clearDuplicates()
+# # print(array)
+# llist2 = LinkedList()
+# x = 0
+# old = llist2
+# for j in range(0,len(array)):
+#     if(llist2.head == None):
+#         llist2.head = Node(array[j])
+#         x=1
+#     else:
+#         ele = Node(array[j])
+#         pointerEle(old)
+#         old = ele
+#         x=0
+
+# llist2.printLlist()
+# print(llist2.head)
