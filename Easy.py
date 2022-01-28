@@ -447,4 +447,69 @@
 #         x=0
 
 # llist2.printLlist()
-# print(llist2.head)
+# print(llist2.head)                        
+
+# ---------------------------------------------------- Q20) --------
+
+class Node:
+    def __init__(self,val):
+        self.val = val
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+    def printLlist(self):
+        temp = self.head
+        while(temp):
+            print(temp.val)
+            temp=temp.next
+    def merge(self, l1,l2):
+        # self.head = l1
+        # print(l1.next.val, l2.next.val)
+        while(l1):
+            while(l2):
+                if(l2.val <l1.val and l1 == l1.head):
+                    # print('dd')
+                    x = Node(l2.val)
+                    x.next = l1.head
+                    l1.head = x
+                    l2.head = l2.next
+                elif(l2.val>l1.val and l1.next == None):
+                    print('xx')
+                    
+                elif(l1.val<=l2.val or l2.val<=l1.next.val):
+                    # print(l1.val,l1.next.val,l2.val)
+                    x = Node(l2.val)
+                    print(l2.val)
+                    x.next = l1.next
+                    l1.next = x 
+
+                l2 = l2.next
+            l1=l1.next
+        # l1.printLlist()
+        return l1
+
+            
+llist = LinkedList()
+llist.head = Node(1)
+second = Node(2)
+third = Node(4)
+llist.head.next = second
+second.next = third
+
+llist2 = LinkedList()
+llist2.head = Node(1)
+sec = Node(3)
+thi = Node(4)
+llist2.head.next = sec
+sec.next = thi
+llist.printLlist()
+print('-----')
+llist2.printLlist()
+# l3 = LinkedList()
+print('--aa----')
+l3 = LinkedList()
+w = l3.merge(llist.head, llist2.head)
+print('yahuuuuu')
+llist.printLlist()
