@@ -468,27 +468,32 @@ class LinkedList:
         # self.head = l1
         # print(l1.next.val, l2.next.val)
         while(l1):
+            print(l1.val,'dddd')
             while(l2):
+                # print(l2.val,'ssss')
                 if(l2.val <l1.val and l1 == l1.head):
                     # print('dd')
                     x = Node(l2.val)
                     x.next = l1.head
                     l1.head = x
                     l2.head = l2.next
+                    
                 elif(l2.val>l1.val and l1.next == None):
                     print('xx')
+                    l1.next = l2
                     
                 elif(l1.val<=l2.val or l2.val<=l1.next.val):
                     # print(l1.val,l1.next.val,l2.val)
-                    x = Node(l2.val)
-                    print(l2.val)
-                    x.next = l1.next
-                    l1.next = x 
-
+                    y = Node(l2.val)
+                    print(l2.val, l1.next.val)
+                    y.next = l1.next
+                    l1.next = y 
+                    # l1 = l1.next
                 l2 = l2.next
             l1=l1.next
+           
         # l1.printLlist()
-        return l1
+        # return l2
 
             
 llist = LinkedList()
@@ -504,12 +509,12 @@ sec = Node(3)
 thi = Node(4)
 llist2.head.next = sec
 sec.next = thi
-llist.printLlist()
+# llist.printLlist()
 print('-----')
-llist2.printLlist()
+# llist2.printLlist()
 # l3 = LinkedList()
 print('--aa----')
 l3 = LinkedList()
-w = l3.merge(llist.head, llist2.head)
+l3.merge(llist.head, llist2.head)
 print('yahuuuuu')
 llist.printLlist()
